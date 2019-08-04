@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
+import Navbar from './components/layout/Navbar';
 import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>MarioPlan</h1>
+        <Navbar />
       </div>
     </BrowserRouter>
   );
