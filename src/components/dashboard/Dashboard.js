@@ -40,9 +40,9 @@ const mapStateToProps = (state) => {
 
 // using compose to set multiple HOC to wrap the Dashboard component
 export default compose(
-    connect(mapStateToProps),
-    firestoreConnect([
-        { collection: 'projects' },
-        { collection: 'notifications', limit: 3 }
-    ])
+  connect(mapStateToProps),
+  firestoreConnect([
+    { collection: "projects", orderBy: ["createdAt", "desc"] },
+    { collection: "notifications", limit: 3, orderBy: ["time", "desc"] }
+  ])
 )(Dashboard);
